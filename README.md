@@ -54,9 +54,23 @@ I recommend creating a venv.
 git clone https://github.com/khanra321/VaB.git
 
 cd VaB
-<h3>2. Create exe file </h3>
+<h3>2. Create and activate a virtual environment:</h3>
+python -m venv .venv
+<h4>Windows</h4> 
+.venv\Scripts\activate
+<h4>macOS / Linux</h4>
+source .venv/bin/activate
+
+<h3>3. Install dependencies</h3>
+pip install -r requirements.txt
+<h3>4. Run the code:</h3>
+python shaka_controller.py
+
+(Replace the script name if your main file differs.)
+
+<h3>5. Create exe file </h3>
 Copy and save this code in a new file. Open a terminal and create an exe file. After that, you use it. 
-<h3>Run the app:</h3>
+<h3>6. Run the app:</h3>
 Open the exe file. It takes permission from you.
 
 <h1>Usage</h1>
