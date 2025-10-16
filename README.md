@@ -6,7 +6,7 @@
 <h1>Overview</h1>
 A real-time desktop application that uses a webcam to control system volume and screen brightness using hand gestures. The project uses MediaPipe for hand landmark detection, OpenCV for video capture & visualization, pycaw to control Windows audio, and screen_brightness_control to set brightness.
 
-The app includes a 3‑second "Shaka" trigger (thumb + pinky open, other fingers folded) — when the Shaka sign is shown the controller becomes active for 3 seconds and during that window:
+The app includes a 3‑second "Shaka" trigger (thumb + pinky open, other fingers folded) — when the Shaka sign is shown, the controller becomes active for 3 seconds, and during that window:
 
 --Left hand (thumb + index) controls screen brightness.
 
@@ -21,7 +21,7 @@ Left hand: brightness control (thumb–index distance)
 
 Right hand: volume control (thumb–index distance)
 
-Visual feedback with lines, % values and countdown timer on the camera feed
+Visual feedback with lines, % values, and a countdown timer on the camera feed
 
 Safety cooldown to avoid accidental re-triggers
 
@@ -82,7 +82,7 @@ Show the Shaka sign (thumb + pinky extended, other fingers folded) to activate a
 
 During the active window:
 
-Use your left hand: move thumb and index to change brightness. The app maps distance to % (0–100).
+Use your left hand: move the thumb and index finger to change brightness. The app maps distance to % (0–100).
 
 Use your right hand: move thumb and index to change volume. The app maps distance to dB/percentage.
 
@@ -104,6 +104,18 @@ Camera not opening: Try changing cv2.VideoCapture(0) to cv2.VideoCapture(1) or o
 
 Volume control not working: pycaw works on Windows only. Ensure comtypes is installed and you run on Windows with proper audio drivers.
 
-Brightness control not working: screen_brightness_control requires support from the OS and display drivers. On multi-monitor setups you can specify the display index.
+Brightness control not working: screen_brightness_control requires support from the OS and display drivers. On multi-monitor setups, you can specify the display index.
 
-Shaka not detected reliably: Tweak the thresholds in is_shaka() — especially the thumb_dist > 0.20 * w threshold and the finger fold checks. Also adjust min_detection_confidence.
+Shaka not detected reliably: Tweak the thresholds in is_shaka() — especially the thumb_dist > 0.20 * w threshold and the finger fold checks. Also, adjust min_detection_confidence.
+
+##  Dual-Camera Version "Update V&B"
+<h3>This version includes:</h3>
+
+Support for **two cameras** (e.g., laptop + phone webcam).
+
+- Press "P" to switch between the Laptop and Phone camera instantly.
+- 
+- Works exactly like the base version otherwise.
+- 
+- Useful for testing with different angles or higher-quality phone cameras.
+
