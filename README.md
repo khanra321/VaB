@@ -51,8 +51,8 @@ I recommend creating a venv.
 
 <h1>Installation (Quick)</h1>
 <h3>1. Clone the repository:</h3>
-git clone https://github.com/<khanra321>/<VaB>.git
-cd <repo-name>
+git clone https://github.com/khanra321/VaB.git
+cd <VaB>
 <h3>2. Create exe file </h3>
 Copy and save this code in a new file. Open a terminal and create an exe file. After that, you use it. 
 <h3>Run the app:</h3>
